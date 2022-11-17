@@ -37,7 +37,6 @@ namespace DataCapture
                     string dummy2 = "\0";
                     using (tr = new StreamReader("C:/Users/usama/source/repos/DataCapture/DataCapture/LoginData/login.txt"))
                     {
-                        //username = tr.ReadLine();
                         username = File.ReadLines("C:/Users/usama/source/repos/DataCapture/DataCapture/LoginData/login.txt").Skip(lineNumber).Take(1).First();
 
                         Console.WriteLine(username);
@@ -61,10 +60,6 @@ namespace DataCapture
                         dbd.Show();
                         this.Hide();
                     }
-                    //else
-                    //{
-                    //    MessageBox.Show("Wrong Creditenials");
-                    //}
                     lineNumber++;
                 }
             }
